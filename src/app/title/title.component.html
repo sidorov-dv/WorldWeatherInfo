@@ -1,0 +1,15 @@
+<div class="head">
+    <h1>World Weather Forecast</h1>
+    <p>Please, click the link below to view list of states in chosen country</p>
+    <ng-select 
+    [items] = "countriesList" 
+    placeholder = "Select country" 
+    appendTo = "body"
+    [clearable] = "true"
+    [searchable] = "true" 
+    loadingText = "Please wait loading countries..."
+    [(ngModel)] = "selectedCountry"
+    (change) = "getCityWeatherService.setSelectedCountry(selectedCountry)">
+    </ng-select>
+    <p>You chose: <a routerLink="/states-list">{{selectedCountry}}</a></p>
+</div>

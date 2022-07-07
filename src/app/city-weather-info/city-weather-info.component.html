@@ -1,0 +1,16 @@
+<div class="contImgWeather" [style.background-image]="imageToShowWeather">
+    <div class="links">
+        <a routerLink="">Main page</a>
+        <a routerLink="/cities-list">Back to chose another city</a>
+    </div>
+    <div class="weather-info">
+        <h1>Current weather in city</h1>
+        <div class="statistics">
+            <p>City: <span>{{targetCityName}}</span></p>
+            <p>Temperature: <span>{{targetTemperature}}</span> °C</p>
+            <p>Pressure: <span>{{targetPressure}}</span> hPa</p>
+            <p>Pressure (using pipe): <span>{{targetPressure | mmHg}}</span> mmHg</p>
+            <p>Humidity: <span>{{targetHumidity}}</span> %</p>
+        </div>
+    </div>
+</div>

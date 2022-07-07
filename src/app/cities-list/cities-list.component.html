@@ -1,0 +1,20 @@
+<div class="link-cont">
+    <a routerLink="">Main page</a>
+    <a routerLink="/states-list">Back to state list</a>
+</div>
+<div class="cities-cont">
+    <h1>Country - {{currentCountry}}, State - {{currentState}}. Cities list:</h1>
+    <div class="fl-cont">
+        <ng-select 
+        [items]="citiesList" 
+        placeholder="Select city" 
+        appendTo="body" 
+        [clearable]="true"
+        [searchable]="true" 
+        loadingText="Please wait loading cities..." 
+        [(ngModel)]="selectedCity"
+        (change)="getCityWeatherService.setSelectedCity(selectedCity)">
+        </ng-select>
+        <p>You chose: <a routerLink="/weather/{{selectedCity}}">{{selectedCity}}</a></p>
+    </div>
+</div>

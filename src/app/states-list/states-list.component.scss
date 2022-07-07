@@ -1,0 +1,52 @@
+.link-cont,
+.cities-cont {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.cities-cont {
+    padding-top: 30vh;
+}
+
+.link-cont a {
+    font-size: 1.5rem;
+    color: dimgray;
+    text-decoration: none;
+    &:visited {
+        color: rgb(160, 45, 184);
+    }
+    &:hover {
+        color: red;
+    }
+    &::before {
+        content: "\1F810";
+    }
+}
+
+.cities-cont {
+    h1 {
+        color: rgb(19, 219, 36);
+        text-align: center;
+        font-size: 2rem;
+    }
+    .fl-cont {
+        max-width: 75vw;
+        margin: auto;
+        text-align: center;
+        .ng-select {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            a {
+                text-decoration: none;
+                font-size: 2rem;
+                cursor: pointer;
+                &:hover {
+                    color: red;
+                }
+                &:visited {
+                    color: rgb(160, 45, 184);
+                }
+            }
+        }
+    }
+}
